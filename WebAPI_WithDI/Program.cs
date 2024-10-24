@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IMovieService, MovieService2>();
 builder.Services.AddDbContext<MyDBContext>(op =>
 {
     op.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection"));

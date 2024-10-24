@@ -7,7 +7,7 @@ namespace WebAPI_WithDI.Service
 {
     public class MovieService : IMovieService
     {
-        private readonly MyDBContext? _dbContext;
+        private MyDBContext? _dbContext;
         private ResponseModel response;
 
         public MovieService(MyDBContext myDBContext)
